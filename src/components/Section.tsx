@@ -1,37 +1,21 @@
 // components/Section.tsx
-import { Section } from "@/types/section";
-import React from "react";
+import { PropsWithChildren } from "react";
 
 interface SectionProps {
-  section: Section;
+  title: string;
+  className?: string;
 }
-
-const SectionComponent: React.FC<SectionProps> = ({ section }) => {
+function Section({
+  title,
+  className = "",
+  children,
+}: PropsWithChildren<SectionProps>) {
   return (
-    <div className="flex gap-x-8">
-      <h2 className="font-bold text-3xl min-w-52">{section.heading}</h2>
-      <div className="flex-grow">
-        {section.items ? (
-          <dl className="grid grid-cols-2 gap-x-4">
-            {section.items.map((item, index) => (
-              <div key={index}>
-                <dt className="font-bold text-lg">{item.title}</dt>
-                <dd className="mt-2">
-                  <ul className="list-disc pl-5">
-                    {item.description.map((desc, i) => (
-                      <li key={i}>{desc}</li>
-                    ))}
-                  </ul>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        ) : (
-          <p className="flex-grow">{section.text}</p>
-        )}
-      </div>
+    <div className={`flex gap-x-8 ${className}`}>
+      <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">{title}</h2>
+      <div className="flex-grow text-[#7c584a]">{children}</div>
     </div>
   );
-};
+}
 
-export default SectionComponent;
+export default Section;

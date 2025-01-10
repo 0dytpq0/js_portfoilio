@@ -1,3 +1,4 @@
+import Section from "@/components/Section";
 import Link from "next/link";
 
 export default function Home() {
@@ -38,10 +39,7 @@ export default function Home() {
         </section>
         <section className="flex-grow px-6">
           <div className="w-full border-t border-opacity-50 border-[#d1c3b4] mb-6"></div>
-          <div className="flex gap-x-8">
-            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-              Personal
-            </h2>
+          <Section title="Personal">
             <p className="flex-grow text-[#7c584a] leading-relaxed">
               반갑습니다, 사용자 중심의 경험을 설계하는 이타적인 프론트엔드
               개발자 박요셉입니다. <br />
@@ -54,7 +52,8 @@ export default function Home() {
               성장하며, 팀과 함께 더 나은 결과를 만들어가는 데 기여하고
               싶습니다. 감사합니다.
             </p>
-          </div>
+          </Section>
+
           <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
           <div className="flex gap-x-8">
             <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
@@ -124,7 +123,83 @@ export default function Home() {
                       공유 및 계획할 수 있도록 돕습니다.
                     </p>
                   </dd>
-                  {/* <dt className="mt-4 font-semibold text-[#5c4033]">
+                  <dt className="mt-4 font-semibold text-[#5c4033]">
+                    사용 기술
+                  </dt>
+                  <dd className="text-[#7c584a]">
+                    TypeScript, Next.js, Supabase, Tanstack-Query, Zustand,
+                    TailwindCss, Git, StoryBook, Vercel
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
+          <div className="flex gap-x-8">
+            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
+              Education
+            </h2>
+            <div className="flex-grow flex text-[#7c584a]">
+              <div className="flex-grow">
+                <span className="block font-semibold text-[#5c4033]">
+                  2016.03 ~ 2024.03(졸업)
+                </span>
+                <span>호남 대학교 (영문학과)</span>
+              </div>
+              <div className="flex-grow">
+                <span className="block font-semibold text-[#5c4033]">
+                  2024.04 ~ 2024.09(수료)
+                </span>
+                <span>내일배움캠프 React 5기 부트캠프</span>
+              </div>
+            </div>
+          </div>
+          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
+          <div className="flex gap-x-8">
+            <div className="flex-col">
+              <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
+                Skills
+              </h2>
+              <span className="text-lg text-[#7c584a]">(tech - soft)</span>
+            </div>
+            <div className="flex flex-grow">
+              <div className="flex-grow flex flex-col">
+                <span className="font-semibold text-[#5c4033]">Next.js</span>
+                <span className="font-semibold text-[#5c4033]">React.js</span>
+                <span className="font-semibold text-[#5c4033]">
+                  Tailwind CSS
+                </span>
+                <span className="font-semibold text-[#5c4033]">Git</span>
+                <span className="font-semibold text-[#5c4033]">TypeScript</span>
+                <span className="font-semibold text-[#5c4033]">JavaScript</span>
+                <span className="font-semibold text-[#5c4033]">
+                  Tanstack Query
+                </span>
+                <span className="font-semibold text-[#5c4033]">Node.js</span>
+              </div>
+              <div className="flex-grow flex flex-col">
+                <span className="font-semibold text-[#5c4033]">책임 의식</span>
+                <span className="font-semibold text-[#5c4033]">적응력</span>
+                <span className="font-semibold text-[#5c4033]">협업 능력</span>
+                <span className="font-semibold text-[#5c4033]">
+                  비판적 사고
+                </span>
+                <span className="font-semibold text-[#5c4033]">시간 관리</span>
+                <span className="font-semibold text-[#5c4033]">끈기</span>
+                <span className="font-semibold text-[#5c4033]">유연성</span>
+                <span className="font-semibold text-[#5c4033]">팀워크</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+// travle story 추가설명
+{
+  /* <dt className="mt-4 font-semibold text-[#5c4033]">
                     제공 서비스
                   </dt>
                   <dd>
@@ -257,77 +332,5 @@ export default function Home() {
                         </ul>
                       </dd>
                     </dl>
-                  </dd> */}
-                  <dt className="mt-4 font-semibold text-[#5c4033]">
-                    사용 기술
-                  </dt>
-                  <dd className="text-[#7c584a]">
-                    TypeScript, Next.js, Supabase, Tanstack-Query, Zustand,
-                    TailwindCss, Git, StoryBook, Vercel
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-              Education
-            </h2>
-            <div className="flex-grow flex text-[#7c584a]">
-              <div className="flex-grow">
-                <span className="block font-semibold text-[#5c4033]">
-                  2016.03 ~ 2024.03(졸업)
-                </span>
-                <span>호남 대학교 (영문학과)</span>
-              </div>
-              <div className="flex-grow">
-                <span className="block font-semibold text-[#5c4033]">
-                  2024.04 ~ 2024.09(수료)
-                </span>
-                <span>내일배움캠프 React 5기 부트캠프</span>
-              </div>
-            </div>
-          </div>
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <div className="flex-col">
-              <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-                Skills
-              </h2>
-              <span className="text-lg text-[#7c584a]">(tech - soft)</span>
-            </div>
-            <div className="flex flex-grow">
-              <div className="flex-grow flex flex-col">
-                <span className="font-semibold text-[#5c4033]">Next.js</span>
-                <span className="font-semibold text-[#5c4033]">React.js</span>
-                <span className="font-semibold text-[#5c4033]">
-                  Tailwind CSS
-                </span>
-                <span className="font-semibold text-[#5c4033]">Git</span>
-                <span className="font-semibold text-[#5c4033]">TypeScript</span>
-                <span className="font-semibold text-[#5c4033]">JavaScript</span>
-                <span className="font-semibold text-[#5c4033]">
-                  Tanstack Query
-                </span>
-                <span className="font-semibold text-[#5c4033]">Node.js</span>
-              </div>
-              <div className="flex-grow flex flex-col">
-                <span className="font-semibold text-[#5c4033]">책임 의식</span>
-                <span className="font-semibold text-[#5c4033]">적응력</span>
-                <span className="font-semibold text-[#5c4033]">협업 능력</span>
-                <span className="font-semibold text-[#5c4033]">
-                  비판적 사고
-                </span>
-                <span className="font-semibold text-[#5c4033]">시간 관리</span>
-                <span className="font-semibold text-[#5c4033]">끈기</span>
-                <span className="font-semibold text-[#5c4033]">유연성</span>
-                <span className="font-semibold text-[#5c4033]">팀워크</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
+                  </dd> */
 }
