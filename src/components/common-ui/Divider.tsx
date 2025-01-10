@@ -1,3 +1,5 @@
+import { cn } from "@/utils/cn";
+
 interface DividerProps {
   thickness?: "lg" | "md" | "sm";
   mt?: "lg" | "md" | "sm" | "none";
@@ -18,7 +20,12 @@ function Divider({ thickness = "sm", mt = "sm", mb = "sm" }: DividerProps) {
 
   return (
     <div
-      className={`w-full border-opacity-50 border-[#d1c3b4] ${thicknessClass} ${marginTopClass} ${marginBottomClass}`}
+      className={cn(
+        "w-full border-opacity-50 border-[#d1c3b4]",
+        thicknessClass,
+        marginTopClass,
+        marginBottomClass
+      )}
     ></div>
   );
 }
