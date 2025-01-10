@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import Divider from "@/components/common-ui/Divider";
 import Link from "next/link";
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
           </div>
         </section>
         <section className="flex-grow px-6">
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] mb-6"></div>
+          <Divider thickness="md" mb="lg" mt="none" />
           <Section title="Personal">
             <p className="flex-grow text-[#7c584a] leading-relaxed">
               반갑습니다, 사용자 중심의 경험을 설계하는 이타적인 프론트엔드
@@ -54,11 +55,8 @@ export default function Home() {
             </p>
           </Section>
 
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-              Experience
-            </h2>
+          <Divider thickness="md" mt="lg" mb="lg" />
+          <Section title="Experience" className="mt-6">
             <div className="flex-grow text-[#7c584a]">
               <dl className="grid grid-cols-2 gap-x-8 gap-y-6">
                 <div>
@@ -95,12 +93,9 @@ export default function Home() {
                 </div>
               </dl>
             </div>
-          </div>
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-              Projects
-            </h2>
+          </Section>
+          <Divider thickness="md" mt="lg" mb="lg" />
+          <Section title="Projects">
             <div className="flex-grow text-[#7c584a]">
               <dl className="space-y-8">
                 <div>
@@ -133,13 +128,10 @@ export default function Home() {
                 </div>
               </dl>
             </div>
-          </div>
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-              Education
-            </h2>
-            <div className="flex-grow flex text-[#7c584a]">
+          </Section>
+          <Divider thickness="md" mt="lg" mb="lg" />
+          <Section title="Education">
+            <div className="grid grid-cols-2 text-[#7c584a]">
               <div className="flex-grow">
                 <span className="block font-semibold text-[#5c4033]">
                   2016.03 ~ 2024.03(졸업)
@@ -153,15 +145,9 @@ export default function Home() {
                 <span>내일배움캠프 React 5기 부트캠프</span>
               </div>
             </div>
-          </div>
-          <div className="w-full border-t border-opacity-50 border-[#d1c3b4] my-6"></div>
-          <div className="flex gap-x-8">
-            <div className="flex-col">
-              <h2 className="font-bold text-3xl text-[#5c4033] min-w-52">
-                Skills
-              </h2>
-              <span className="text-lg text-[#7c584a]">(tech - soft)</span>
-            </div>
+          </Section>
+          <Divider thickness="md" mt="lg" mb="lg" />
+          <Section title="Skills">
             <div className="flex flex-grow">
               <div className="flex-grow flex flex-col">
                 <span className="font-semibold text-[#5c4033]">Next.js</span>
@@ -190,7 +176,7 @@ export default function Home() {
                 <span className="font-semibold text-[#5c4033]">팀워크</span>
               </div>
             </div>
-          </div>
+          </Section>
         </section>
       </main>
     </div>
