@@ -315,8 +315,26 @@ export default function Home() {
               <span className="text-lg">(tech - soft)</span>
             </div>
             <div className="flex flex-grow ">
-              <div className="flex-grow"> tech 기술 </div>
-              <div className="flex-grow"> soft 기술 </div>
+              <div className="flex-grow flex flex-col">
+                <span>Next.js</span>
+                <span>React.js</span>
+                <span>Tailwind CSS</span>
+                <span>Git</span>
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>Tanstack Query</span>
+                <span>Node.js</span>
+              </div>
+              <div className="flex-grow flex flex-col">
+                <span>책임 의식</span>
+                <span>적응력</span>
+                <span>협업 능력</span>
+                <span>비판적 사고</span>
+                <span>시간 관리</span>
+                <span>끈기</span>
+                <span>유연성</span>
+                <span>팀워크</span>
+              </div>
             </div>
           </div>
         </section>
