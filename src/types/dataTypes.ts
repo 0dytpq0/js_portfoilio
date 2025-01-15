@@ -3,6 +3,12 @@ export interface IEducation {
   desc: string;
 }
 
+interface IProblem {
+  title: string;
+  problem: string;
+  challenge: string[];
+  solution: string[];
+}
 export interface IProject {
   title: string;
   duration: string;
@@ -10,6 +16,9 @@ export interface IProject {
   address: string;
   desc: string[];
   skills: string[];
+  services?: string[];
+  tasks?: string[];
+  problems?: { [key: string]: IProblem };
 }
 
 export interface IExperience {

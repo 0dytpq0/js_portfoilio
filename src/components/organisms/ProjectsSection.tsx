@@ -1,9 +1,11 @@
 import { projects } from "@/constants/data/projects";
 import Link from "next/link";
+import ProblemsList from "../molecules/ProblemsList";
 import SectionWrapper from "./SectionWrapper";
 
 function ProjectsSection() {
-  const { title, duration, desc, gitHub, skills } = projects["travelStory"];
+  const { title, duration, desc, gitHub, skills, problems } =
+    projects["travelStory"];
 
   return (
     <SectionWrapper title="Projects">
@@ -30,6 +32,7 @@ function ProjectsSection() {
           </p>
           <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
           <dd>{skills.join(", ")}</dd>
+          <ProblemsList problems={problems} />
         </dd>
       </dl>
     </SectionWrapper>
