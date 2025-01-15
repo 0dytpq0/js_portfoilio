@@ -1,8 +1,59 @@
-import Section from "@/components/Section";
-import Divider from "@/components/common-ui/Divider";
+import EducationSection from "@/components/organisms/EducationSection";
+import { ExperienceSection } from "@/components/organisms/ExperienceSection";
+import PersonalSection from "@/components/organisms/PersonalSection";
+import ProjectsSection from "@/components/organisms/ProjectsSection";
+import SkillsSection from "@/components/organisms/SkillsSection";
 import Link from "next/link";
+// personal = title, ReactNode
+// experience = title, ReactNode
+// Projects = title, ReactNode
+// Education = title, ReactNode
+// Skills = title, ReactNode
 
+// ReactNode 를 만들어주는 컴포넌트가 필요함
+// {
+// title : string
+// desc : string
+// duration : string
+// github : string
+// skills : string[]
+// }
+
+interface ISectionItem {
+  title?: string;
+  desc?: JSX.Element;
+  gitHub?: string;
+  duration?: string;
+  github?: string;
+  address?: string;
+  skills?: string[];
+}
 export default function Home() {
+  function SectionItem(props: ISectionItem) {
+    const skills = props.skills!.join(", ");
+    return (
+      <dl className="space-y-8">
+        <div>
+          <dt className="font-semibold text-[#5c4033]">{props.title}</dt>
+          <dd>
+            <span>{props.duration}</span> <br />
+            <span>
+              GitHub :
+              <Link
+                href={props.gitHub ?? ""}
+                className="text-[#a16848] underline hover:text-[#7c584a]"
+              >
+                {props.gitHub}
+              </Link>
+            </span>
+            <p className="mt-4 leading-relaxed">{props.desc}</p>
+          </dd>
+          <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
+          <dd className="text-[#7c584a]">{skills}</dd>
+        </div>
+      </dl>
+    );
+  }
   return (
     <div className="m-auto rounded-lg h-screen bg-[#f4f1ec] container">
       <main className="flex p-8 h-full w-full">
@@ -39,144 +90,11 @@ export default function Home() {
           </div>
         </section>
         <section className="flex-grow px-6">
-          <Divider thickness="md" mb="lg" mt="none" />
-          <Section title="Personal">
-            <p className="flex-grow text-[#7c584a] leading-relaxed">
-              반갑습니다, 사용자 중심의 경험을 설계하는 이타적인 프론트엔드
-              개발자 박요셉입니다. <br />
-              저의 강점은 타인의 입장에서 생각하며 문제를 해결하려는 태도입니다.{" "}
-              <br />
-              사용자 관점에서 UX를 고민하고, 팀의 성과를 극대화하기 위해 협업과
-              소통에 최선을 다합니다. <br /> 저는 문제 해결과 성능 최적화에 깊은
-              관심을 가지고 있으며, 효율적인 코드 작성과 최적의 솔루션 도출을
-              위해 끊임없이 질문하고 탐구합니다. <br /> 배움을 멈추지 않고
-              성장하며, 팀과 함께 더 나은 결과를 만들어가는 데 기여하고
-              싶습니다. 감사합니다.
-            </p>
-          </Section>
-
-          <Divider thickness="md" mt="lg" mb="lg" />
-          <Section title="Experience" className="mt-6">
-            <div className="flex-grow text-[#7c584a]">
-              <dl className="grid grid-cols-2 gap-x-8 gap-y-6">
-                <div>
-                  <dt className="font-semibold text-[#5c4033]">
-                    (주) 다운 - 프론트엔드 개발자
-                  </dt>
-                  <dd>
-                    2022.11 ~ 2023.05 <br />
-                    <ul className="list-disc pl-5">
-                      <li>
-                        사내 윈도우 기반 프로그램을 웹 애플리케이션으로 전환 및
-                        유지보수
-                      </li>
-                      <li>
-                        자동 착유 및 방역 기계 조작 기능 클라이언트 구현 및 서버
-                        작업 수행
-                      </li>
-                    </ul>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-[#5c4033]">
-                    메멘토 AI - 프론트엔드 개발자
-                  </dt>
-                  <dd>
-                    2024.10.21 ~ 2024.11.21 <br />
-                    <ul className="list-disc pl-5">
-                      <li>
-                        병원 CRM 시스템의 사용자 인터페이스(UI) 설계 및 개발
-                      </li>
-                      <li>클라이언트와 서버 간 데이터 페칭 및 성능 최적화</li>
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </Section>
-          <Divider thickness="md" mt="lg" mb="lg" />
-          <Section title="Projects">
-            <div className="flex-grow text-[#7c584a]">
-              <dl className="space-y-8">
-                <div>
-                  <dt className="font-semibold text-[#5c4033]">Travel Story</dt>
-                  <dd>
-                    <span>2024.07 ~ 2024.08</span> <br />
-                    <span>
-                      GitHub :
-                      <Link
-                        href={"https://github.com/0dytpq0"}
-                        className="text-[#a16848] underline hover:text-[#7c584a]"
-                      >
-                        https://github.com/0dytpq0
-                      </Link>
-                    </span>
-                    <p className="mt-4 leading-relaxed">
-                      'Travel Story'는 유저들에게 여행에 대한 편의성을 제공하기
-                      위해 개발한 플랫폼입니다. <br />
-                      유저가 관심있는 여행지의 정보를 쉽게 얻고, 일정과 관광지를
-                      공유 및 계획할 수 있도록 돕습니다.
-                    </p>
-                  </dd>
-                  <dt className="mt-4 font-semibold text-[#5c4033]">
-                    사용 기술
-                  </dt>
-                  <dd className="text-[#7c584a]">
-                    TypeScript, Next.js, Supabase, Tanstack-Query, Zustand,
-                    TailwindCss, Git, StoryBook, Vercel
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </Section>
-          <Divider thickness="md" mt="lg" mb="lg" />
-          <Section title="Education">
-            <div className="grid grid-cols-2 text-[#7c584a]">
-              <div className="flex-grow">
-                <span className="block font-semibold text-[#5c4033]">
-                  2016.03 ~ 2024.03(졸업)
-                </span>
-                <span>호남 대학교 (영문학과)</span>
-              </div>
-              <div className="flex-grow">
-                <span className="block font-semibold text-[#5c4033]">
-                  2024.04 ~ 2024.09(수료)
-                </span>
-                <span>내일배움캠프 React 5기 부트캠프</span>
-              </div>
-            </div>
-          </Section>
-          <Divider thickness="md" mt="lg" mb="lg" />
-          <Section title="Skills">
-            <div className="flex flex-grow">
-              <div className="flex-grow flex flex-col">
-                <span className="font-semibold text-[#5c4033]">Next.js</span>
-                <span className="font-semibold text-[#5c4033]">React.js</span>
-                <span className="font-semibold text-[#5c4033]">
-                  Tailwind CSS
-                </span>
-                <span className="font-semibold text-[#5c4033]">Git</span>
-                <span className="font-semibold text-[#5c4033]">TypeScript</span>
-                <span className="font-semibold text-[#5c4033]">JavaScript</span>
-                <span className="font-semibold text-[#5c4033]">
-                  Tanstack Query
-                </span>
-                <span className="font-semibold text-[#5c4033]">Node.js</span>
-              </div>
-              <div className="flex-grow flex flex-col">
-                <span className="font-semibold text-[#5c4033]">책임 의식</span>
-                <span className="font-semibold text-[#5c4033]">적응력</span>
-                <span className="font-semibold text-[#5c4033]">협업 능력</span>
-                <span className="font-semibold text-[#5c4033]">
-                  비판적 사고
-                </span>
-                <span className="font-semibold text-[#5c4033]">시간 관리</span>
-                <span className="font-semibold text-[#5c4033]">끈기</span>
-                <span className="font-semibold text-[#5c4033]">유연성</span>
-                <span className="font-semibold text-[#5c4033]">팀워크</span>
-              </div>
-            </div>
-          </Section>
+          <PersonalSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <EducationSection />
+          <SkillsSection />
         </section>
       </main>
     </div>
