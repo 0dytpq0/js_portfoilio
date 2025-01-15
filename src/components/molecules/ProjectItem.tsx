@@ -1,6 +1,7 @@
 import { projects } from "@/constants/data/projects";
 import { useModal } from "@/context/ModalContext";
 import Link from "next/link";
+import SkillsList from "./SkillsList";
 
 interface IProjectItem {
   name: string;
@@ -37,7 +38,7 @@ function ProjectItem({ name }: IProjectItem) {
           ))}
         </p>
         <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
-        <dd>{skills.join(", ")}</dd>
+        <SkillsList skills={skills} horizontal={true} />
       </dl>
     </dl>
   );

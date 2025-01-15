@@ -1,4 +1,5 @@
 import { skills } from "@/constants/data/skills";
+import SkillsList from "../molecules/SkillsList";
 import SectionWrapper from "./SectionWrapper";
 
 function SkillsSection() {
@@ -8,18 +9,10 @@ function SkillsSection() {
     <SectionWrapper title="Skills">
       <div className="flex flex-grow">
         <div className="flex-grow flex flex-col">
-          {hardSkills.map((skill, index) => (
-            <span key={index} className="font-semibold text-[#5c4033]">
-              {skill}
-            </span>
-          ))}
+          <SkillsList skills={hardSkills} />
         </div>
         <div className="flex-grow flex flex-col">
-          {softSkills.map((skill, index) => (
-            <span key={index} className="font-semibold text-[#5c4033]">
-              {skill}
-            </span>
-          ))}
+          <SkillsList skills={softSkills} />
         </div>
       </div>
     </SectionWrapper>
