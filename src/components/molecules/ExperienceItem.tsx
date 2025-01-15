@@ -1,16 +1,11 @@
-interface ExperienceItemProps {
-  company: string;
-  role: string;
-  duration: string;
-  tasks: string[];
-}
+import { IExperience } from "@/types/dataTypes";
 
 export function ExperienceItem({
   company,
   role,
   duration,
   tasks,
-}: ExperienceItemProps) {
+}: IExperience) {
   return (
     <div>
       <dt className="font-semibold text-[#5c4033]">

@@ -19,41 +19,7 @@ import Link from "next/link";
 // skills : string[]
 // }
 
-interface ISectionItem {
-  title?: string;
-  desc?: JSX.Element;
-  gitHub?: string;
-  duration?: string;
-  github?: string;
-  address?: string;
-  skills?: string[];
-}
 export default function Home() {
-  function SectionItem(props: ISectionItem) {
-    const skills = props.skills!.join(", ");
-    return (
-      <dl className="space-y-8">
-        <div>
-          <dt className="font-semibold text-[#5c4033]">{props.title}</dt>
-          <dd>
-            <span>{props.duration}</span> <br />
-            <span>
-              GitHub :
-              <Link
-                href={props.gitHub ?? ""}
-                className="text-[#a16848] underline hover:text-[#7c584a]"
-              >
-                {props.gitHub}
-              </Link>
-            </span>
-            <p className="mt-4 leading-relaxed">{props.desc}</p>
-          </dd>
-          <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
-          <dd className="text-[#7c584a]">{skills}</dd>
-        </div>
-      </dl>
-    );
-  }
   return (
     <div className="m-auto rounded-lg h-screen bg-[#f4f1ec] container">
       <main className="flex p-8 h-full w-full">

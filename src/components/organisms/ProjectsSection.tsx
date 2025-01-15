@@ -20,7 +20,14 @@ function ProjectsSection() {
               {gitHub}
             </Link>
           </span>
-          <p className="mt-4">{desc}</p>
+          <p className="mt-4">
+            {desc.map((line, index) => (
+              <span key={index}>
+                {line}
+                {index + 1 !== desc.length ? <br /> : null}
+              </span>
+            ))}
+          </p>
           <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
           <dd>{skills.join(", ")}</dd>
         </dd>
