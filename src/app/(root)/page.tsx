@@ -3,58 +3,9 @@ import { ExperienceSection } from "@/components/organisms/ExperienceSection";
 import PersonalSection from "@/components/organisms/PersonalSection";
 import ProjectsSection from "@/components/organisms/ProjectsSection";
 import SkillsSection from "@/components/organisms/SkillsSection";
-import { IProject } from "@/types/dataTypes";
 import Link from "next/link";
-// personal = title, ReactNode
-// experience = title, ReactNode
-// Projects = title, ReactNode
-// Education = title, ReactNode
-// Skills = title, ReactNode
-
-// ReactNode 를 만들어주는 컴포넌트가 필요함
-// {
-// title : string
-// desc : string
-// duration : string
-// github : string
-// skills : string[]
-// }
 
 export default function Home() {
-  function ProblemsList({ problems }: { problems: IProject["problems"] }) {
-    return (
-      <div>
-        {Object.values(problems!).map((problem, index) => (
-          <div key={index} className="mb-8">
-            <h3 className="font-semibold text-lg text-[#5c4033]">
-              {problem.title}
-            </h3>
-            <dl className="space-y-4">
-              <dt className="font-semibold text-md text-[#5c4033]">문제점</dt>
-              <dd className="text-[#7c584a]">{problem.problem}</dd>
-              <dt className="font-semibold text-md text-[#5c4033]">도전</dt>
-              <dd className="text-[#7c584a]">
-                <ul className="list-disc pl-5">
-                  {problem.challenge.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </dd>
-              <dt className="font-semibold text-md text-[#5c4033]">해결</dt>
-              <dd className="text-[#7c584a]">
-                <ul className="list-disc pl-5">
-                  {problem.solution.map((item, idx) => (
-                    <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
-                  ))}
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div className="m-auto rounded-lg h-screen bg-[#f4f1ec] container">
       <main className="flex p-8 h-full w-full">
