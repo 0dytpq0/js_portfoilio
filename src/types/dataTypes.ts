@@ -3,7 +3,7 @@ export interface IEducation {
   desc: string;
 }
 
-interface IProblem {
+export interface IProblem {
   title: string;
   problem: string;
   challenge: string[];
