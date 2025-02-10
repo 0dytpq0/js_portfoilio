@@ -13,9 +13,9 @@ function ProjectItem({ name }: IProjectItem) {
   return (
     <dl
       className="text-[#7c584a]"
-      onClick={() => {
-        openModal();
-      }}
+      // onClick={() => {
+      //   openModal();
+      // }}
     >
       <dt className="font-semibold text-[#5c4033]">{title}</dt>
       <dl>

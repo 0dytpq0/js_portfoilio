@@ -10,7 +10,7 @@ function ProjectsSection() {
       <SectionWrapper title="Projects">
         <ProjectItem name="travelStory" />
       </SectionWrapper>
-      <ProjectsModal name="travelStory" />
+      {/* <ProjectsModal name="travelStory" /> */}
     </>
   );
 }
