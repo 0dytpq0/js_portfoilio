@@ -2,6 +2,7 @@ import { projects } from "@/constants/data/projects";
 import { useModal } from "@/context/ModalContext";
 import Link from "next/link";
 import SkillsList from "./SkillsList";
+import ProjectsModal from "../organisms/ProjectsModal";
 
 interface IProjectItem {
   name: string;
@@ -13,9 +14,9 @@ function ProjectItem({ name }: IProjectItem) {
   return (
     <dl
       className="text-[#7c584a]"
-      // onClick={() => {
-      //   openModal();
-      // }}
+      onClick={() => {
+        openModal();
+      }}
     >
       <dt className="font-semibold text-[#5c4033]">{title}</dt>
       <dl>
@@ -40,6 +41,7 @@ function ProjectItem({ name }: IProjectItem) {
         <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
         <SkillsList skills={skills} horizontal={true} />
       </dl>
+      {/* <ProjectsModal name={name} /> */}
     </dl>
   );
 }

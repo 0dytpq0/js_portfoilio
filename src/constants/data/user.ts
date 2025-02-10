@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
   name: { first: string; last: string };
   phone: string;
   email: string;
@@ -6,7 +6,7 @@ export interface User {
   blog: string;
 }
 
-export const user: User = {
+export const user: IUser = {
   name: { first: "Joseph", last: "Park" },
   phone: "010-3146-0962",
   email: "rkfnahs12e@gmail.com",

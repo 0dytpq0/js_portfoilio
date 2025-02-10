@@ -1,8 +1,8 @@
-import { User } from "@/constants/data/user";
+import { IUser } from "@/constants/data/user";
 import Link from "next/link";
 
 interface UserInfoProps {
-  user: User;
+  user: IUser;
 }
 
 const UserInfo = ({ user }: UserInfoProps) => {
