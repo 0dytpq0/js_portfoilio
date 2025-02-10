@@ -9,12 +9,12 @@ function Modal({ children }: PropsWithChildren) {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="relative bg-[#f4f1ec] p-6 rounded-lg shadow-lg h-[800px] w-screen m-20 overflow-auto">
+      <div className="relative bg-[#f4f1ec] p-6 rounded-lg shadow-lg h-[900px] w-screen max-w-[900px] m-20 overflow-auto">
         {children}
         <TiTimes
           onClick={closeModal}
           size={"40"}
-          className="absolute top-4 right-4"
+          className="absolute top-4 right-4 cursor-pointer"
         />
       </div>
     </div>

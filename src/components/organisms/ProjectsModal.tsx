@@ -2,58 +2,31 @@ import { projects } from "@/constants/data/projects";
 import { useModal } from "@/context/ModalContext";
 import Image from "next/image";
 import Modal from "../molecules/Modal";
-import ProblemsList from "../molecules/ProblemsList";
-import ServiceList from "../molecules/ServiceList";
-import TaskList from "../molecules/TaskList";
+import ProblemsSection from "./ProblemsSection";
+import ServiceSection from "./ServiceSection";
+import TaskList from "./TaskSection";
+import TechDecisionSection from "./TechDecisionSection";
 
-interface IProjectsModal {
+interface IProjectsModalProps {
   name: string;
 }
 
-function ProjectsModal({ name }: IProjectsModal) {
-  const { problems, services, tasks } = projects[name];
-  const { openModal } = useModal();
-
+function ProjectsModal({ name }: IProjectsModalProps) {
+  const { techDecision, problems, services, tasks } = projects[name];
   return (
     <>
       <Modal>
         <div className="w-full flex">
-          <div className="w-1/5">
+          <div className="w-full">
             <h1 className="font-bold text-[#5c4033] text-5xl">Travel Story</h1>
-            <ServiceList services={services!} />
-            <TaskList tasks={tasks!} />
-          </div>
-          <div className="flex-grow flex overflow-hidden">
-            <div className="w-full relative aspect-video max-h-72">
-              <Image
-                src={"/main.PNG"}
-                alt="travelStoryMain"
-                fill
-                priority={true}
-                className="object-fill"
-              />
-            </div>
-            <div className="w-full relative aspect-video max-h-72">
-              <Image
-                src={"/travelStoryMain.PNG"}
-                alt="travelStoryMain"
-                fill
-                priority={true}
-                className="object-fill"
-              />
-            </div>
-            <div className="w-full relative aspect-video max-h-72">
-              <Image
-                src={"/main.PNG"}
-                alt="travelStoryMain"
-                fill
-                priority={true}
-                className="object-fill"
-              />
+            <div className="grid grid-cols-2">
+              <ServiceSection services={services!} />
+              <TaskList tasks={tasks!} />
             </div>
           </div>
         </div>
-        <ProblemsList problems={problems} />
+        <TechDecisionSection techDecision={techDecision!} />
+        <ProblemsSection problems={problems} />
       </Modal>
     </>
   );

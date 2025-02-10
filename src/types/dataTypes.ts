@@ -9,6 +9,10 @@ interface IProblem {
   challenge: string[];
   solution: string[];
 }
+export interface ITechDecision {
+  title: string;
+  reason: string[];
+}
 export interface IProject {
   title: string;
   duration: string;
@@ -18,6 +22,7 @@ export interface IProject {
   skills: string[];
   services?: string[];
   tasks?: string[];
+  techDecision?: { [key: string]: ITechDecision };
   problems?: { [key: string]: IProblem };
 }
 

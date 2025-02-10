@@ -2,7 +2,7 @@ interface ServiceListProps {
   services: string[];
 }
 
-function ServiceList({ services }: ServiceListProps) {
+function ServiceSection({ services }: ServiceListProps) {
   return (
     <div>
       <dt className="mt-4 font-semibold text-lg text-[#5c4033]">제공 서비스</dt>
@@ -17,4 +17,4 @@ function ServiceList({ services }: ServiceListProps) {
   );
 }
 
-export default ServiceList;
+export default ServiceSection;

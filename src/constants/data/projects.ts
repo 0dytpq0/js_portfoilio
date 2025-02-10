@@ -27,6 +27,29 @@ export const projects: { [key: string]: IProject } = {
       "여행 일정 추가 및 생성 기능 구현",
       "북마크 기능 구현",
     ],
+    techDecision: {
+      tanstackQuery: {
+        title: "Tanstack Query",
+        reason: [
+          " 데이터에 대한 자동 캐싱 및 리페칭 기능 및 비동기 작업의 효율적 관리",
+          "제공하는 훅들의 강력한 성능으로 인한 SSR, 낙관적 업데이트 등에 대한 간편한 구현",
+        ],
+      },
+      supabase: {
+        title: "Supabase",
+        reason: [
+          "백엔드 없이도 강력한 데이터 관리 기능 제공",
+          "오픈소스이기에 데이터 소유권 유지 가능",
+        ],
+      },
+      zustand: {
+        title: "Zustand",
+        reason: [
+          "직관적인 API로 인해 간편하게 상태 관리 가능",
+          "보일러 플레이트 코드 최소화",
+        ],
+      },
+    },
     problems: {
       bookmarkFeature: {
         title: "북마크 기능",
@@ -91,6 +114,29 @@ export const projects: { [key: string]: IProject } = {
       "여행 일정 추가 및 생성 기능 구현",
       "북마크 기능 구현",
     ],
+    techDecision: {
+      tanstackQuery: {
+        title: "Tanstack Query",
+        reason: [
+          " 데이터에 대한 자동 캐싱 및 리페칭 기능 및 비동기 작업의 효율적 관리",
+          "제공하는 훅들의 강력한 성능으로 인한 SSR, 낙관적 업데이트 등에 대한 간편한 구현",
+        ],
+      },
+      supabase: {
+        title: "Supabase",
+        reason: [
+          "백엔드 없이도 강력한 데이터 관리 기능 제공",
+          "오픈소스이기에 데이터 소유권 유지 가능",
+        ],
+      },
+      zustand: {
+        title: "Zustand",
+        reason: [
+          "직관적인 API로 인해 간편하게 상태 관리 가능",
+          "보일러 플레이트 코드 최소화",
+        ],
+      },
+    },
     problems: {
       bookmarkFeature: {
         title: "북마크 기능",

@@ -5,6 +5,7 @@ import { projects } from "@/constants/data/projects";
 import ProjectItem from "../molecules/ProjectItem";
 import SectionWrapper from "./SectionWrapper";
 import { TiChevronRight, TiChevronLeft } from "react-icons/ti";
+import ProjectsModal from "./ProjectsModal";
 
 function ProjectsSection() {
   const projectKeys = Object.keys(projects);
