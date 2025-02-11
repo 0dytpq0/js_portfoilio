@@ -7,7 +7,7 @@ interface ITechDecisionSectionProps {
 
 function TechDecisionSection({ techDecision }: ITechDecisionSectionProps) {
   return (
-    <div>
+    <div className="max-h-[200px] overflow-auto">
       <h1 className="font-bold text-3xl text-[#5c4033] my-4">
         기술적 의사 결정
       </h1>
