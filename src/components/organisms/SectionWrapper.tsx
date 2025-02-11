@@ -1,4 +1,4 @@
-import Divider from "../aoms/Divider";
+import Divider from "../atoms/Divider";
 import Section from "../molecules/Section";
 
 interface SectionWrapperProps {

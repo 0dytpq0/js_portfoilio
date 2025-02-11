@@ -12,13 +12,14 @@ interface IProjectsModalProps {
 }
 
 function ProjectsModal({ name }: IProjectsModalProps) {
-  const { techDecision, problems, services, tasks } = projects[name];
+  const { techDecision, problems, services, tasks, title } = projects[name];
+  console.log(name);
   return (
     <>
       <Modal>
         <div className="w-full flex">
           <div className="w-full">
-            <h1 className="font-bold text-[#5c4033] text-5xl">Travel Story</h1>
+            <h1 className="font-bold text-[#5c4033] text-5xl">{title}</h1>
             <div className="grid grid-cols-2">
               <ServiceSection services={services!} />
               <TaskList tasks={tasks!} />
