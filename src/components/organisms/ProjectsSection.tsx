@@ -4,15 +4,14 @@ import { useRef } from "react";
 import { projects } from "@/constants/data/projects";
 import ProjectItem from "../molecules/ProjectItem";
 import SectionWrapper from "./SectionWrapper";
-import { useSlider } from "@/hooks/useSlider";
 import ArrowButton from "../atoms/ArrowButton";
+import { useSlider } from "@/hooks/useSlider";
 import { cn } from "@/utils/cn";
 
 function ProjectsSection() {
   const projectKeys = Object.keys(projects);
   const { currentIndex, animation, prevProject, nextProject, isAnimating } =
     useSlider(projectKeys);
-
   const projectRef = useRef<{ openModal: () => void } | null>(null);
 
   return (

@@ -14,28 +14,28 @@ export default {
         foreground: "var(--foreground)",
       },
       keyframes: {
-        slideInLeft: {
+        "slide-in-left": {
           "0%": { transform: "translateX(-100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
-        slideInRight: {
+        "slide-in-right": {
           "0%": { transform: "translateX(100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
-        slideOutLeft: {
+        "slide-out-left": {
           "0%": { transform: "translateX(0)", opacity: "1" },
           "100%": { transform: "translateX(-100%)", opacity: "0" },
         },
-        slideOutRight: {
+        "slide-out-right": {
           "0%": { transform: "translateX(0)", opacity: "1" },
           "100%": { transform: "translateX(100%)", opacity: "0" },
         },
       },
       animation: {
-        slideInLeft: "slideInLeft 0.5s ease-out",
-        slideInRight: "slideInRight 0.5s ease-out",
-        slideOutLeft: "slideOutLeft 0.5s ease-in",
-        slideOutRight: "slideOutRight 0.5s ease-in",
+        "slide-in-left": "slide-in-left 0.5s ease-out",
+        "slide-in-right": "slide-in-right 0.5s ease-out",
+        "slide-out-left": "slide-out-left 0.5s ease-in",
+        "slide-out-right": "slide-out-right 0.5s ease-in",
       },
     },
   },
