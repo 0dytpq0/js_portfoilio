@@ -19,7 +19,7 @@ const ProjectItem = forwardRef(({ name }: IProjectItem, ref) => {
 
   return (
     <>
-      <dl className="text-[#7c584a]">
+      <dl className="text-[#7c584a] w-full">
         <dt className="font-semibold text-[#5c4033]">{title}</dt>
         <dl>
           <span>{duration}</span> <br />

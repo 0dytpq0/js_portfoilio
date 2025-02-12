@@ -13,7 +13,6 @@ interface IProjectsModalProps {
 
 function ProjectsModal({ name }: IProjectsModalProps) {
   const { techDecision, problems, services, tasks, title } = projects[name];
-  console.log(name);
   return (
     <>
       <Modal>
