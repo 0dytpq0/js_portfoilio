@@ -4,7 +4,6 @@ export function useSlider(projectKeys: string[]) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animation, setAnimation] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
-  console.log("animatino", animation);
   const prevProject = () => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -16,7 +15,7 @@ export function useSlider(projectKeys: string[]) {
       );
       setAnimation("animate-slideInLeft");
       setTimeout(() => setIsAnimating(false), 500);
-    }, 300);
+    }, 400);
   };
 
   const nextProject = () => {
@@ -30,8 +29,8 @@ export function useSlider(projectKeys: string[]) {
       );
       setAnimation("animate-slideInRight");
       setTimeout(() => setIsAnimating(false), 500);
-    }, 300);
+    }, 400);
   };
 
-  return { currentIndex, animation, prevProject, nextProject };
+  return { currentIndex, animation, prevProject, nextProject, isAnimating };
 }

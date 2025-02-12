@@ -19,6 +19,7 @@ function UserSection() {
           src={"/joseph.webp"}
           alt="joseph"
           fill
+          priority={true}
           className="object-cover rounded-lg"
         />
       </div>
