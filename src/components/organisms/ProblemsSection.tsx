@@ -25,10 +25,10 @@ function ProblemsSection({ problems }: { problems: IProject["problems"] }) {
   );
 
   return (
-    <>
+    <div className="w-full max-h-[450px]">
       <h1 className="font-bold text-3xl text-[#5c4033] my-4">문제 해결 목록</h1>
       <SliderWrapper>{makeProblemsList()}</SliderWrapper>
-    </>
+    </div>
   );
 }
 

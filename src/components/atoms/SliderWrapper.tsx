@@ -12,6 +12,7 @@ function SliderWrapper({ children }: PropsWithChildren) {
       loop={true}
       pagination={true}
       modules={[Pagination]}
+      className="w-full h-full"
     >
       {children}
     </Swiper>
