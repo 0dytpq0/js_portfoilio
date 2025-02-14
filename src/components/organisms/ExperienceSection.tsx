@@ -6,7 +6,7 @@ export function ExperienceSection() {
   return (
     <SectionWrapper title="Experience">
       <section className="flex-grow text-[#7c584a]">
-        <dl className="grid grid-cols-2 gap-x-8 gap-y-6">
+        <dl className="flex flex-col gap-y-6">
           {experiences.map((exp, index) => (
             <ExperienceItem
               key={index}

@@ -15,7 +15,7 @@ function EducationSection() {
 
   return (
     <SectionWrapper title="Education">
-      <div className="grid grid-cols-2 text-[#7c584a]">
+      <div className="grid gap-4 lg:grid-cols-1 xl:gap-0 xl:grid-cols-2 text-[#7c584a]">
         {educationItems.map((item, index) => (
           <EducationItem
             key={index}

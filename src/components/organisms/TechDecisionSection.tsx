@@ -16,7 +16,7 @@ function TechDecisionSection({ techDecision }: ITechDecisionSectionProps) {
       <dl className="max-h-[200px] overflow-auto">
         <SliderWrapper>
           {Object.entries(techDecision!).map(([key, { title, reason }]) => (
-            <SwiperSlide>
+            <SwiperSlide key={key}>
               <div key={key} className="mb-8">
                 <dt className="font-bold text-xl text-[#5c4033] my-2">
                   {title}
