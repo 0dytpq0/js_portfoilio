@@ -32,7 +32,7 @@ const ProjectItem = forwardRef(({ name }: IProjectItem, ref) => {
               {gitHub}
             </Link>
           </span>
-          <p className="mt-4">
+          <p className="mt-4 max-w-[93%] min-h-20">
             {desc.map((line, index) => (
               <span key={index}>
                 {line}

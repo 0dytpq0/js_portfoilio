@@ -10,7 +10,7 @@ const ArrowButton = ({ direction, onClick }: ArrowButtonProps) => {
 
   return (
     <div
-      className={`absolute ${isLeft ? "left-[-50px]" : "right-4"} 
+      className={`absolute ${isLeft ? "left-[-50px]" : "right-0"} 
         top-1/2 -translate-y-1/2 z-10`}
     >
       {isLeft ? (
