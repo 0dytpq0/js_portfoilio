@@ -6,7 +6,7 @@ function SkillsSection() {
   const { hard: hardSkills, soft: softSkills } = skills;
 
   return (
-    <SectionWrapper title="Skills">
+    <SectionWrapper title={`Skills`}>
       <div className="flex flex-grow">
         <div className="flex-grow flex flex-col">
           <SkillsList skills={hardSkills} />

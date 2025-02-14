@@ -40,7 +40,9 @@ const ProjectItem = forwardRef(({ name }: IProjectItem, ref) => {
               </span>
             ))}
           </p>
-          <dt className="mt-4 font-semibold text-[#5c4033]">사용 기술</dt>
+          <dt className="mt-4 font-semibold text-[#5c4033] max-w-[93%]">
+            사용 기술
+          </dt>
           <SkillsList skills={skills} horizontal={true} />
         </dl>
       </dl>
