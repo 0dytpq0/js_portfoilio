@@ -18,7 +18,6 @@ export const projects: { [key: string]: IProject } = {
       "Zustand",
       "TailwindCss",
       "Git",
-      "StoryBook",
       "Vercel",
     ],
     services: ["여행 정보 제공", "계획 기반 경로 표시", "일정 공유"],

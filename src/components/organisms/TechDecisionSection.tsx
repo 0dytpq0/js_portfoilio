@@ -2,6 +2,7 @@ import { ITechDecision } from "@/types/dataTypes";
 import React from "react";
 import SliderWrapper from "../atoms/SliderWrapper";
 import { SwiperSlide } from "swiper/react";
+import Divider from "../atoms/Divider";
 
 interface ITechDecisionSectionProps {
   techDecision: { [key: string]: ITechDecision };
@@ -10,6 +11,8 @@ interface ITechDecisionSectionProps {
 function TechDecisionSection({ techDecision }: ITechDecisionSectionProps) {
   return (
     <div>
+      <Divider thickness="md" />
+
       <h1 className="font-bold text-3xl text-[#5c4033] my-4">
         기술적 의사 결정
       </h1>

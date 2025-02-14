@@ -4,8 +4,7 @@ function PersonalSection() {
   return (
     <SectionWrapper title="Personal">
       <span className="text-[#7c584a] leading-relaxed">
-        반갑습니다, 사용자 중심의 경험을 설계하는 이타적인 프론트엔드 개발자
-        박요셉입니다. <br />
+        안녕하세요, 이타적인 프론트엔드 개발자 박요셉입니다. <br />
       </span>
       <h3 className="text-lg font-bold mt-3">핵심 역량</h3>
       <ul className="list-disc pl-5">

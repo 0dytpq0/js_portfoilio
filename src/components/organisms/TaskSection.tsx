@@ -1,8 +1,8 @@
-interface TaskListProps {
+interface TaskSectionProps {
   tasks: string[];
 }
 
-function TaskList({ tasks }: TaskListProps) {
+function TaskSection({ tasks }: TaskSectionProps) {
   return (
     <div>
       <dt className="mt-4 font-semibold text-lg text-[#5c4033]">담당 역할</dt>
@@ -17,4 +17,4 @@ function TaskList({ tasks }: TaskListProps) {
   );
 }
 
-export default TaskList;
+export default TaskSection;
