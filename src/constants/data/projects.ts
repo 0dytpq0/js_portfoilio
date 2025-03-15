@@ -91,7 +91,7 @@ export const projects: { [key: string]: IProject } = {
   },
   cloneMarket: {
     title: "Clone Market",
-    duration: "2025-09 ~ ",
+    duration: "2025-09 ~ 2025.03",
     gitHub: "https://github.com/0dytpq0/Clone-Market",
     address: "none",
     desc: [
